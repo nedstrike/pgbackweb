@@ -81,6 +81,7 @@ func createDatabaseButton() gomponents.Node {
 						html.Option(html.Value("14"), gomponents.Text("PostgreSQL 14")),
 						html.Option(html.Value("15"), gomponents.Text("PostgreSQL 15")),
 						html.Option(html.Value("16"), gomponents.Text("PostgreSQL 16")),
+            			html.Option(html.Value("17"), gomponents.Text("PostgreSQL 17")),
 					},
 				}),
 

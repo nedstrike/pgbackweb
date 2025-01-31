@@ -106,6 +106,10 @@ func editDatabaseButton(
 							gomponents.If(database.PgVersion == "16", html.Selected()),
 							html.Value("16"), gomponents.Text("PostgreSQL 16"),
 						),
+                        html.Option(
+                            gomponents.If(database.PgVersion == "17", html.Selected()),
+                            html.Value("17"), gomponents.Text("PostgreSQL 17"),
+                        ),
 					},
 				}),
 

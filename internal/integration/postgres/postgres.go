@@ -49,6 +49,11 @@ var (
 		pgDump:  "/usr/lib/postgresql/16/bin/pg_dump",
 		psql:    "/usr/lib/postgresql/16/bin/psql",
 	}}
+    PG17 = PGVersion{version{
+        version: "17",
+        pgDump:  "/usr/lib/postgresql/17/bin/pg_dump",
+        psql:    "/usr/lib/postgresql/17/bin/psql",
+	}}
 )
 
 type Client struct{}
@@ -69,6 +74,8 @@ func (Client) ParseVersion(version string) (PGVersion, error) {
 		return PG15, nil
 	case "16":
 		return PG16, nil
+    case "17":
+    	return PG17, nil
 	default:
 		return PGVersion{}, fmt.Errorf("pg version not allowed: %s", version)
 	}
